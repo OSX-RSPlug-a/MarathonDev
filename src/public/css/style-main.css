@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+   
+   :root {
+       --backgroundColor: #E6E7E7;
+       --logo-color: #181818;
+       --font-all: "Assistant", sans-serif;
+       --icon-color: #ff1414;
+       --card-back1: tomato;
+       --card-font: #fff;
+   }
+   
+   *, *::before, *::after {
+       box-sizing: border-box;
+       margin:0%;
+       padding: 0%;
+       -webkit-text-size-adjust:none;
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
+     }
+
+   html, body {
+       line-height: 1.6;
+       font-family: var(--font-all);
+       font-size: 1.2em;
+       background: var(--backgroundColor);
+   }
+
+   header, main, section, footer {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       align-content: certer;
+       align-self: center;
+       text-align: center;
+       margin: 0 auto;
+   }
+
+   header, .form, main {
+       margin-bottom: 12vh;
+       width: 90%;
+       max-width: 500px;
+   }
+
+   header h1 {
+       font-size: 5em;
+       margin-bottom: 3vh;
+       height: 100%;
+       line-height: 120px;
+   }
+
+   header h2 {
+       line-height: 80px;
+   }
+
+   header p {
+       line-height: 25px;
+   }
+
+   header button {
+       margin-top: 40px;
+       width: 120px;
+       margin-bottom: 4px;
+       padding: 15px 16px;
+       border-radius: 5px;
+       border: 1px var(--card-font) solid;
+       background: var(--icon-color);
+       letter-spacing: 3px;
+       color: var(--card-font);
+   }
+
+   .logo {
+       color: var(--logo-color);
+   }
+
+   i.fas {
+       color: var(--icon-color);
+       font-size: 100px;
+   }    
+
+   main {
+       line-height: 30px;    
+   }
+
+   main h2 {
+       color: var(--logo-color);
+       
+       margin-bottom: 8vh;
+       font-size: 3em;
+   }
+   
+   main h2 span{
+       color: var(--icon-color);
+   }
+
+   main h3 {
+       color: var(--icon-color);
+       line-height: 25px;   
+   }
+
+   .blood {
+       display: flex;
+       align-items: center;
+       position: relative;
+       justify-content: center;
+   }
+
+   .donors {
+       display: grid;
+       grid-template-columns:  1fr 1fr 1fr 1fr;
+   }
+
+   .donor h3 {
+       color: var(--icon-color);
+       line-height: 25px;  
+       z-index: 11;
+   }
+
+   .donor p {
+       margin-top: 24px;
+       font-size: 16px;
+   }
+
+   .blood::before {
+       content: "";
+       background: tomato;
+       width: 40px;
+       height: 40px;
+       position: absolute;
+       border-radius: 50%;
+       border-top-right-radius: 0;
+       transform: rotate(-45deg);
+       opacity: 0.2;
+       z-index: 1;
+   }
+
+   section.form {
+       display: grid;
+       grid-template-columns:  1fr 1fr;
+       grid-gap: 45px;
+       align-items: center;
+       background: var(--card-back1);
+       min-width: 380px;
+       max-width: 600px;
+       padding: 16px 64px;
+       border-radius: 5px;
+       border: 1px var(--card-back1) solid;
+       transition: all 300ms;
+   }
+
+   section > form input, form button {
+       width: 100%;
+       margin-bottom: 4px;
+       padding: 15px 16px;
+       border-radius: 4px;
+       border: 1px var(--icon-color) solid;
+       background: var(--card-back1);
+       opacity: 0.8;
+       color: var(--card-font);
+       letter-spacing: 3px;
+   }
+
+   form input[text], input::placeholder {
+       color: var(--card-font);
+   }
+
+   section > form button {
+       background: var(--card-font);
+       color: var(--logo-color);
+   }
+
+   .form h2 {
+       color: var(--card-font);
+   }
+
+   section.form.hide {
+       opacity: 0;
+       visibility: hidden;
+       height: 0;
+       margin-bottom: 15vh;
+       margin-top: -70px;
+   }
+
+   @media screen and (max-width: 450px) {
+       section.form {
+           display: flex;
+           flex-direction: column;
+           line-height: 5vh;
+       }
+       .donors {
+           display: grid;
+           grid-template-columns:  1fr;
+       }
+       main h2 {
+           line-height: 8vh;
+       }
+   }
+
+   @media (prefers-color-scheme: dark) {
+       :root {
+           --backgroundColor: #000;
+           --logo-color: #fff;
+           --card-font: #fff;
+       }
+       header p {
+           color: #fff;
+       }
+       section p {
+           color: #fff;
+       }
+       footer {
+           color: #fff;
+       }
+       section > form button {
+           color: #000;
+       }
+     }
+
+   @-ms-viewport {
+       width: device-width;
+   }

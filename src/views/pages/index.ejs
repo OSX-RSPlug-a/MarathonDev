@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+	<meta name="x-apple-disable-message-reformatting" />
+
+    <link rel="stylesheet" href="/css/style-main.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" />
+
+	<title>Donate Blood cares</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="logo">D<i class="fas fa-tint"></i>N</h1>
+
+        <h2>Your donation matters!</h2>
+
+        <p>
+            Three lives can be saved with one donation still.
+        </p>
+
+        <p>
+            More than 38k donates are necessary everyday
+        </p>
+
+        <p>
+            Less than 1,9% of population donates
+        </p>
+
+        <button>Help</button>
+
+    </header>
+
+    <section class="form hide">
+
+        <h2>Come being one of donators list</h2>
+
+        <form action="/" method="POST">
+
+            <input type="text" name="name" placeholder="Full name" required>
+
+            <input type="email" name="email" placeholder="Email" required>
+
+            <input type="text" name="blood" placeholder="Type blood" required>
+
+            <button>Help</button>
+
+        </form>
+
+    </section>
+
+    <main>
+        
+        <h2>Last <span>donators</span></h2>
+
+        <section class="donors">
+
+            <% donor.forEach(function(donors) {  %>
+
+            <div class="donor">
+
+                <h3 class="blood"><strong><%= donors.blood %></strong></h3>
+
+                <p>
+                    <%= donors.name %>
+                </p>
+
+            </div>
+
+            <% }); %>
+
+            <!--<div class="donor">
+
+                <h3 class="blood"><strong>B+</strong></h3>
+
+                <p>
+                    Dude Bug
+                </p>
+
+            </div>
+            
+            <div class="donor">
+
+                <h3 class="blood"><strong>A+</strong></h3>
+
+                <p>
+                    Lablon James
+                </p>
+
+            </div>
+            
+            <div class="donor">
+
+                <h3 class="blood"><strong>O+</strong></h3>
+
+                <p>
+                    Jhon Snow
+                </p>
+
+            </div>-->
+            
+        </section>    
+
+    </main>
+
+    <footer>
+            
+        <cite>@DudeBug MarathonDev 2020 </cite>
+
+    </footer>
+    
+
+    <script type="text/javascript" src="./config/togle.js"></script>
+		
+
+</body>
+
+</html>
